@@ -41,7 +41,11 @@ Syllabus and Calendar
 ==============================================================
 
 Tue Sep 5 2023: Intro & Propositional Logic
-    - Slides 
+    - In this lecture we'll go over course admin.
+    - We'll also start with the material.
+    - To reason about programs, we need to know logic, the language of computation.
+    - We'll start with the simplest one: propositional logic.
+    - [Slides](slides/lecture1.pdf) 
 Wed Sep 6 2023: Normal Forms & DPLL
 Sun Sep 10 2023: Deadline: Assignment due (2 pts)
     - Intro to Haskell & Monads due 
@@ -52,7 +56,7 @@ Wed Sep 13 2023: First-order Theories
 Sun Sep 17 2023: Deadline: Assignment 1a (2 pt)
 Tue Sep 19 2023: Nano & Hoare Logic
 Wed Sep 20 2023: Hoare Logic & VCGen 
-Sun Sep 24 2023: Monads & DPLL & SMT (6 pt)   
+Sun Sep 24 2023: Deadline: Monads & DPLL & SMT (6 pt)   
 Tue Sep 26 2023: VCs for Functions and Pointer
 Wed Sep 27 2023: Horn Clauses
 Sun Oct 1 2023: Deadline: Assignment 2: VCGen (10 pt)
@@ -79,11 +83,11 @@ Projects
 - Start small. Build a small core language and implement the most important functionality. Then scale up.
 - The projects will be done in groups of 2, as before.
 - First you'll have to submit a 1 page proposal. 
-- Next, you'll omplement the project and write a report of up to three pages. 
+- Next, you'll implement the project and write a report of up to three pages. 
 - What worked? what didn’t? what was hard?
 - Evaluate your project on a set of benchmarks.
-- You should have a Readme file telling us how to run your project, and add documentation throughout the code. 
-- Make sure it compiles–we can’t grade it otherwise.
+- You should have a Readme.md file telling us how to run your project, and add documentation throughout the code. 
+- Make sure it compiles---we can’t grade it otherwise.
 - You can pick an idea below or come up with your own. If you pick your own idea, you need to get an okay from us.
 - We reward ambition. Projects might turn into research that could get published. This has happened with [similar courses in the past](https://cseweb.ucsd.edu/~dstefan/cse227-spring22/#halloffame).
 - If you pick a more difficult topic you can get a (very) good grade even if you don’t fully achieve your intended result (but take a serious step towards the goal). 
@@ -101,7 +105,7 @@ Your proposal should briefly address the following questions (less than one page
 - Why is this important?
 - What are the risks?
 
-You can upload the proposal via Canvas.
+You can upload the proposal via [Canvas](https://canvas.vu.nl/courses/71804).
 
 ## Project Ideas
 
@@ -120,7 +124,7 @@ You can upload the proposal via Canvas.
 - Medium: Build a type system checking for memory safety for LLVM, building on [this paper](https://people.eecs.berkeley.edu/~necula/Papers/ccured_toplas.pdf).
 - Medium/Hard: Implement ideas from [this paper](https://link.springer.com/chapter/10.1007/978-3-642-14295-6_7) to prove program termination or non-termination via ranking functions.
 - Medium: Build an automated verifier e.g., using [liquid fixpoint](https://github.com/ucsd-progsys/liquid-fixpoint), that proves bounds checks for arrays in  LLVM IR.
-- Medium/Hard: Implement a VCGEN-based verifier for P4 networking code.
+- Medium/Hard: Implement a VCGen-based verifier for P4 networking code.
 - Medium: Build an IFC language and type-system for Verilog, and use it to prove timing-chache side-channel freedom.
 - Medium: Build an automated verifier (e.g., using liquid fixpoint) that verifies leakage freedom for software by building a product program  see [this paper](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/almeida) for inspiration.
 - Medium/Hard: Implement an alternative approach to Horn clause solving e.g., from [this paper](https://arxiv.org/pdf/1610.06768.pdf) or [this paper](https://link.springer.com/chapter/10.1007/978-3-319-08867-9_55).
@@ -130,23 +134,23 @@ You can upload the proposal via Canvas.
 - Hard: Build an IFC system that verifies leakage model for Verilog hardware, see [this paper](https://gleissen.github.io/papers/ccs2023.pdf) and [this paper](https://www.usenix.org/system/files/usenixsecurity23-daniel.pdf).
 - Hard Build a program semantics for Rowhammer and define a notion of security.
 - Medium: Build a type-system to protect against a different spectre variant or row-hammer.
-- Medium/Hard: Implement a verifier for Rust, following https://arxiv.org/pdf/2002.09002.pdf.
-- Hard: Verify parts of Rust’s foreign function interface: https://goto.ucsd.edu/~rjhala/hotos-ffi.pdf.
-- Medium: Implement invariant generation using non-linear solving, following https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39.
-- Medium: Implement liquid types checking https://arxiv.org/pdf/2010.07763.pdf.
+- Medium/Hard: Implement a verifier for Rust, following [this paper](https://arxiv.org/pdf/2002.09002.pdf).
+- Hard: Verify parts of Rust’s foreign function interface, see [this paper](https://goto.ucsd.edu/~rjhala/hotos-ffi.pdf).
+- Medium: Implement invariant generation using non-linear solving, following [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39).
+- Medium: Implement [liquid types checking](https://arxiv.org/pdf/2010.07763.pdf).
 - Medium: We can use arrays to reason about concurrent programs that are run with arbitrary many threads. Each array element is used to encode the local state of one of the threads. Implement and verify a challenging concurrent algorithm.
 - Medium: Implement an IFC type system for assembly to prove timing-channel freedom.
-- Medium/Hard: Implement a verifier based on relational Hoare logic, or probabilistic Hoare logic (see https://software.imdea.org/~gbarthe/__introrelver.pdf).
+- Medium/Hard: Implement a verifier based on relational Hoare logic, or probabilistic Hoare logic, see these [lecture notes](https://software.imdea.org/~gbarthe/__introrelver.pdf).
 - Medium: Build a verifier that can prove absence of spectre gadgets.
-- Hard: Implement a type-checker for probabilistic proofs of cryptographic protocols, see https://dl.acm.org/doi/pdf/10.1145/3571223 .
-- Medium/Hard: Define a semantics and correctness notion for https://www.hertzbleed.com
-- Medium/Hard: Implement a type checker for masking implementations against power side-channels: https://eprint.iacr.org/2015/506.pdf
-- Medium/Hard: Implement a checker for differential privacy, see  https://dl.acm.org/doi/pdf/10.1145/3158146 or https://www.cse.psu.edu/~dbz5017/pub/popl17.pdf
-- Medium/Hard: Extend our verifier with refinement proofs (for security or concurrency). What would be a good way to represent these proofs at the program level? https://dl.acm.org/doi/pdf/10.1145/3492545
-- Medium/Hard: Implement a verifier for neural networks: https://verifieddeeplearning.com/nnv_book.pdf
-- Medium/Hard: Implement https://arxiv.org/pdf/1303.2489.pdf to build an automated verifier that can deal with more complicated data-structures like linked-lists.
-- Hard: Implement a verifier for quantum algorithms, see: https://dl.acm.org/doi/10.1145/3582016.3582039
-- Hard: Use Farkas’ lemma (see https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39) to automatically infer invariants for quantum programs.
+- Hard: Implement a type-checker for probabilistic proofs of cryptographic protocols, see [this paper](https://dl.acm.org/doi/pdf/10.1145/3571223).
+- Medium/Hard: Define a semantics and correctness notion for [Hertzbleed](https://www.hertzbleed.com).
+- Medium/Hard: Implement a type checker for masking implementations against power side-channels, see [this paper](https://eprint.iacr.org/2015/506.pdf).
+- Medium/Hard: Implement a checker for differential privacy, see [this paper](https://dl.acm.org/doi/pdf/10.1145/3158146) or [this paper](https://www.cse.psu.edu/~dbz5017/pub/popl17.pdf).
+- Medium/Hard: Extend our verifier with [refinement proofs](https://dl.acm.org/doi/pdf/10.1145/3492545), for security or concurrency. What would be a good way to represent these proofs at the program level?
+- Medium/Hard: Implement a verifier for neural networks: see these [lecture notes](https://verifieddeeplearning.com/nnv_book.pdf).
+- Medium/Hard: Implement [this paper](https://arxiv.org/pdf/1303.2489.pdf) to build an automated verifier that can deal with more complicated data-structures like linked-lists.
+- Hard: Implement a verifier for quantum algorithms, see e.g., [this paper](https://dl.acm.org/doi/10.1145/3582016.3582039).
+- Hard: Use Farkas’ lemma, see [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39) to automatically infer invariants for quantum programs.
 
 
 ## Hall of Fame: Best Projects
