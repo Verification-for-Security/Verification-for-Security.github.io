@@ -69,11 +69,22 @@ Tue Sep 12 2023: First-order Logic
 Wed Sep 13 2023: First-order Theories
     - Propositional logic was not expressive enough, FOL was too expressive.
     - In this lectures we'll talk about the Goldilocks of logics: first-order theories.
+    - First-order theories allow us to encode many interesting questions about programs while still maintaining decidability.
     - We'll learn about satisfiability modulo theories (or SMT) which underlies most modern tools for verification, symbolic execution and bug finding.
     - [Slides](slides/lecture4.pdf) 
 Sun Sep 17 2023: Deadline: Assignment 1a (2 pt)
 Tue Sep 19 2023: Nano & Hoare Logic
+    - Now that we've learned about the right logic to reason about programs, we can start to look at actual programs!
+    - We'll start by defining an imperative language, called Nano, and giving it formal semantics.
+    - Next, we need to think about when these programs are correct. For this, we'll take a look at Hoare logic.
+    - [Slides](slides/lecture5.pdf) 
 Wed Sep 20 2023: Hoare Logic & VCGen 
+    - Hoare logic is great, as it lets us talk about the correctness of programs.
+    - But so far, we have to do proofs manually by constructing a derivation in Hoare logic.
+    - Instead, we'll now partially automate proofs by creating a set of verification conditions--SMT formulas whose validity lets us deduce whether the program is correct.
+    - We can then send these to an SMT solver.
+    - Now, all we have to do is write loop invariants, and we can check their correctness automatically. 
+    - [Slides](slides/lecture4.pdf) 
 Sun Sep 24 2023: Deadline: Monads & DPLL & SMT (6 pt)   
 Tue Sep 26 2023: VCs for Functions and Pointer
 Wed Sep 27 2023: Horn Clauses
@@ -97,11 +108,21 @@ Assignments          |  Points  | Due Date
  0: Haskell & Monads | 2 pt     | 10 Sep 2023
  1a: Formal Proofs   | 2 pt     | 17 Sep 2023
  1b: DPLL & SMT      | 6 pt     | 24 Sep 2023
- 2 : VCGen           | 10 pt    | 02 Oct 2023
+ 2 : VCGen           | 10 pt    | 01 Oct 2023
+
+ - All assignments will be written in [Haskell](https://www.haskell.org/). 
+ - You may not be familiar with Haskell yet, but we'll do our best to catch you up.
+ - Check out this awesome [tutorial](http://learnyouahaskell.com/chapters) to get you started.
+ - Monads have proven to be one of the toughest topics to understand. We wrote this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) to help.
+ - Haskell is not an arbitrary choice, it's the core language for this type of research.
+ - One of the learning goals of this course is to get you aquainted with this type of programming.
+ - Knowing functional programming well will make you a better programmer, both in Haskell and other languages.
+ - On this note, you may be interested to read why PL researchers [love Haskell so much](https://www.quora.com/Why-do-computer-scientists-like-Haskell-so-much).
 
  ## Details
- 
+
  - Assignment 1: Haskell and Monads
+    - Once you're done, please fill out [this form](https://docs.google.com/forms/d/1IQzEiNOiue__Ca5qLbcAMewfOYfr7DLH5hc0UY0fCVU/edit) to give us feedback on the assignment.
  - Assignment 2: DPLL and SMT
  - Assignment 3: Hoare Logic and VCGen
 
@@ -135,53 +156,13 @@ Your proposal should briefly address the following questions (less than one page
 - Why is this important?
 - What are the risks?
 
+These questions have been adopted from the [Heilmeier Catechism](https://www.darpa.mil/work-with-us/heilmeier-catechism).
+
 You can upload the proposal via [Canvas](https://canvas.vu.nl/courses/71804).
 
 ## Project Ideas
 
-- Easy: Extend our verifier with pointers and prove the correctness of a pointer manipulating program (say, a linked-list implementation).
-- Easy: Extend our verifier with Bitvector types. Implement a crypto-algorithm (AES, SHA) and prove its correctness.
-- Easy: Build a larger verified application with our verifier and add a runtime with webassembly (you can use [this](https://www.wasm.builders/gunjan_0307/compiling-javascript-to-wasm-34lk) as a starting point).
-- Easy/Medium: Add Horn clause inference via predicate abstraction to the verifier, as discussed in class.
-- Easy: add automation to our verifier by implementing [this paper](https://users.soe.ucsc.edu/~cormac/papers/fme01.pdf). This is an easier algorithm than the one discussed in class.
-- Easy: Implement IFC type system for nano, and write a secure application. 
-- Easy/Medium: Implement this [type system](https://people.eecs.berkeley.edu/~necula/Papers/ccured_toplas.pdf) for memory safety.
-- Easy/Medium: Implement a different type system for memory safety: see [this](https://borretti.me/article/type-systems-memory-safety) for inspiration.
-- Easy/Medium: Extend our verifier to make it more usable. Whenever Z3 produces a counterexample use [QuickCheck](https://hackage.haskell.org/package/QuickCheck) to test if the counterexample is reachable. If yes, the program is incorrect. Else, the invariant has to be refined.
-- Easy/Medium: Add a “decreases” annotation to the verifier, like in [Dafny](http://dafny.org/latest/DafnyRef/DafnyRef#sec-decreases-clause). This can be used to prove termination. Use can use [this](https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Patrick_Gruntz_BA_report.pdf) as starting point.
-- Easy/Medium: Build a VCGen based verifier for LLVM IR, e.g., using [this library](https://hackage.haskell.org/package/llvm-hs).
-- Medium: Build a VCGen based verifier for Verilog hardware.
-- Medium: Build a type system checking for memory safety for LLVM, building on [this paper](https://people.eecs.berkeley.edu/~necula/Papers/ccured_toplas.pdf).
-- Medium/Hard: Implement ideas from [this paper](https://link.springer.com/chapter/10.1007/978-3-642-14295-6_7) to prove program termination or non-termination via ranking functions.
-- Medium: Build an automated verifier e.g., using [liquid fixpoint](https://github.com/ucsd-progsys/liquid-fixpoint), that proves bounds checks for arrays in  LLVM IR.
-- Medium/Hard: Implement a VCGen-based verifier for P4 networking code.
-- Medium: Build an IFC language and type-system for Verilog, and use it to prove timing-chache side-channel freedom.
-- Medium: Build an automated verifier (e.g., using liquid fixpoint) that verifies leakage freedom for software by building a product program  see [this paper](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/almeida) for inspiration.
-- Medium/Hard: Implement an alternative approach to Horn clause solving e.g., from [this paper](https://arxiv.org/pdf/1610.06768.pdf) or [this paper](https://link.springer.com/chapter/10.1007/978-3-319-08867-9_55).
-- Medium: Implement a staged verifier for C code; see [this paper](https://dl.acm.org/doi/pdf/10.1145/3009837.3009867) for inspiration.
-- Medium: Typecheck OS code using IFC, see [this paper](http://www.scs.stanford.edu/histar/).
-- Hard: Build an IFC language for software that proves leakage freedom, under a specific hardware contract: see [this paper](https://gleissen.github.io/papers/ccs2023.pdf).
-- Hard: Build an IFC system that verifies leakage model for Verilog hardware, see [this paper](https://gleissen.github.io/papers/ccs2023.pdf) and [this paper](https://www.usenix.org/system/files/usenixsecurity23-daniel.pdf).
-- Hard Build a program semantics for Rowhammer and define a notion of security.
-- Medium: Build a type-system to protect against a different spectre variant or row-hammer.
-- Medium/Hard: Implement a verifier for Rust, following [this paper](https://arxiv.org/pdf/2002.09002.pdf).
-- Hard: Verify parts of Rust’s foreign function interface, see [this paper](https://goto.ucsd.edu/~rjhala/hotos-ffi.pdf).
-- Medium: Implement invariant generation using non-linear solving, following [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39).
-- Medium: Implement [liquid types checking](https://arxiv.org/pdf/2010.07763.pdf).
-- Medium: We can use arrays to reason about concurrent programs that are run with arbitrary many threads. Each array element is used to encode the local state of one of the threads. Implement and verify a challenging concurrent algorithm.
-- Medium: Implement an IFC type system for assembly to prove timing-channel freedom.
-- Medium/Hard: Implement a verifier based on relational Hoare logic, or probabilistic Hoare logic, see these [lecture notes](https://software.imdea.org/~gbarthe/__introrelver.pdf).
-- Medium: Build a verifier that can prove absence of spectre gadgets.
-- Hard: Implement a type-checker for probabilistic proofs of cryptographic protocols, see [this paper](https://dl.acm.org/doi/pdf/10.1145/3571223).
-- Medium/Hard: Define a semantics and correctness notion for [Hertzbleed](https://www.hertzbleed.com).
-- Medium/Hard: Implement a type checker for masking implementations against power side-channels, see [this paper](https://eprint.iacr.org/2015/506.pdf).
-- Medium/Hard: Implement a checker for differential privacy, see [this paper](https://dl.acm.org/doi/pdf/10.1145/3158146) or [this paper](https://www.cse.psu.edu/~dbz5017/pub/popl17.pdf).
-- Medium/Hard: Extend our verifier with [refinement proofs](https://dl.acm.org/doi/pdf/10.1145/3492545), for security or concurrency. What would be a good way to represent these proofs at the program level?
-- Medium/Hard: Implement a verifier for neural networks: see these [lecture notes](https://verifieddeeplearning.com/nnv_book.pdf).
-- Medium/Hard: Implement [this paper](https://arxiv.org/pdf/1303.2489.pdf) to build an automated verifier that can deal with more complicated data-structures like linked-lists.
-- Hard: Implement a verifier for quantum algorithms, see e.g., [this paper](https://dl.acm.org/doi/10.1145/3582016.3582039).
-- Hard: Use Farkas’ lemma, see [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39) to automatically infer invariants for quantum programs.
-
+See [this page](projects.html) for a list of project ideas.
 
 ## Hall of Fame: Best Projects
 TBD
