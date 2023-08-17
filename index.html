@@ -7,7 +7,7 @@ About
 This course focuses on formal verification with an eye on security. For the
 first part of the course, we will cover the basics of formal verification
 through lectures. We'll start from zero, but move fast. The purpose of this part
-of the course is to give you the necessary backbround to understand and
+of the course is to give you the necessary background to understand and
 implement program verification tools. In fact, we'll build both an SMT solver
 and a fully functioning program verifier, similar to Amazon's
 [Dafny](http://dafny.org/), from the ground up. In the second part of the
@@ -36,6 +36,13 @@ exam on January 9, 2024, but there will be no resit for the practical
 assignments or project.
 
 
+Component                     |  Percentage
+------------------------------|-------------------
+ Assignments  | 25%
+ Project      | 25%
+ Final Exam   | 50%
+
+
 
 Syllabus and Calendar
 ==============================================================
@@ -47,15 +54,23 @@ Tue Sep 5 2023: Intro & Propositional Logic
     - We'll start with the simplest one: propositional logic.
     - [Slides](slides/lecture1.pdf) 
 Wed Sep 6 2023: Normal Forms & DPLL
-    - To use propositional logic for reasoning about programs, we need to be able to solve questions formulas alorithmically.
+    - To use propositional logic for reasoning about programs, we need to be able to solve questions about formulas alorithmically.
     - In this lecture, we cover the DPLL algorithm that can check whether a propositional formula is satisfiable.
     - [Slides](slides/lecture2.pdf) 
 Sun Sep 10 2023: Deadline: Assignment due (2 pts)
     - Intro to Haskell & Monads due 
-    - TODO: github repo
-    - Also see this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) on monads.
+    - Also see this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) we wrote about monads.
 Tue Sep 12 2023: First-order Logic
+    - We now know how to solve questions about propositional logic, but the logic is too limited to encode many interesting questions about programs.
+    - In this lecture, we'll look at a *way* more expressive logic: first order logic (FOL).
+    - In fact, we'll see that FOL is *too* expressive! 
+    - It's no longer possible to answer questions algorithmically in an efficient way, as most interesting problems are undecidable. 
+    - [Slides](slides/lecture3.pdf) 
 Wed Sep 13 2023: First-order Theories
+    - Propositional logic was not expressive enough, FOL was too expressive.
+    - In this lectures we'll talk about the Goldilocks of logics: first-order theories.
+    - We'll learn about satisfiability modulo theories (or SMT) which underlies most modern tools for verification, symbolic execution and bug finding.
+    - [Slides](slides/lecture4.pdf) 
 Sun Sep 17 2023: Deadline: Assignment 1a (2 pt)
 Tue Sep 19 2023: Nano & Hoare Logic
 Wed Sep 20 2023: Hoare Logic & VCGen 
@@ -73,10 +88,22 @@ Tue Oct 24 2023: Final Exam
 Sun Oct 28 2023: Deadline: Final Project
 
 Assignments
-==============================================================     
-- Assignment 1: Haskell and Monads
-- Assignment 2: DPLL and SMT
-- Assignment 3: Hoare Logic and VCGen
+==============================================================    
+
+## Overview 
+
+Assignments          |  Points  | Due Date
+---------------------|----------|-------------------
+ 0: Haskell & Monads | 2 pt     | 10 Sep 2023
+ 1a: Formal Proofs   | 2 pt     | 17 Sep 2023
+ 1b: DPLL & SMT      | 6 pt     | 24 Sep 2023
+ 2 : VCGen           | 10 pt    | 02 Oct 2023
+
+ ## Details
+ 
+ - Assignment 1: Haskell and Monads
+ - Assignment 2: DPLL and SMT
+ - Assignment 3: Hoare Logic and VCGen
 
 Projects
 ==============================================================
