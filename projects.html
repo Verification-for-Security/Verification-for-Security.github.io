@@ -33,7 +33,7 @@ Project Ideas
 - Hard: Verify parts of Rust’s foreign function interface, see [this paper](https://goto.ucsd.edu/~rjhala/hotos-ffi.pdf).
 - Medium: Implement invariant generation using non-linear solving, following [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39).
 - Medium: Implement [liquid types checking](https://arxiv.org/pdf/2010.07763.pdf).
-- Medium: We can use arrays to reason about concurrent programs that are run with arbitrary many threads. Each array element is used to encode the local state of one of the threads. Implement and verify a challenging concurrent algorithm.
+- Medium: We can use arrays to reason about concurrent programs that are run with arbitrary many threads. Each array element is used to encode the local state of one of the threads. See e.g., [this paper](https://dl.acm.org/doi/10.1145/3009837.3009893). Implement and verify a challenging concurrent algorithm.
 - Medium: Implement an IFC type system for assembly to prove timing-channel freedom.
 - Medium/Hard: Implement a verifier based on relational Hoare logic, or probabilistic Hoare logic, see these [lecture notes](https://software.imdea.org/~gbarthe/__introrelver.pdf).
 - Medium: Build a verifier that can prove absence of spectre gadgets.
