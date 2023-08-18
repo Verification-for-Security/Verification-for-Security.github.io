@@ -17,6 +17,8 @@ Project Ideas
 - Easy/Medium: Extend our verifier to make it more usable. Whenever Z3 produces a counterexample use [QuickCheck](https://hackage.haskell.org/package/QuickCheck) to test if the counterexample is reachable. If yes, the program is incorrect. Else, the invariant has to be refined.
 - Easy/Medium: Add a “decreases” annotation to the verifier, like in [Dafny](http://dafny.org/latest/DafnyRef/DafnyRef#sec-decreases-clause). This can be used to prove termination. Use can use [this](https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Patrick_Gruntz_BA_report.pdf) as starting point.
 - Easy/Medium: Build a VCGen based verifier for LLVM IR, e.g., using [this library](https://hackage.haskell.org/package/llvm-hs).
+- Easy/Medium: Reimplement [this paper](https://files.sri.inf.ethz.ch/website/papers/sigcomm20-netdice.pdf) for probabilistic network verification.
+- Easy/Medium: Reimplement [this paper](https://www.cs.princeton.edu/~dpw/papers/minesweeper-sigcomm17.pdf) for SMT based network verification.
 - Medium: Build a VCGen based verifier for Verilog hardware.
 - Medium: Build a type system checking for memory safety for LLVM, building on [this paper](https://people.eecs.berkeley.edu/~necula/Papers/ccured_toplas.pdf).
 - Medium/Hard: Implement ideas from [this paper](https://link.springer.com/chapter/10.1007/978-3-642-14295-6_7) to prove program termination or non-termination via ranking functions.
@@ -46,6 +48,7 @@ Project Ideas
 - Medium/Hard: Extend our verifier with [refinement proofs](https://dl.acm.org/doi/pdf/10.1145/3492545), for security or concurrency. What would be a good way to represent these proofs at the program level?
 - Medium/Hard: Implement a verifier for neural networks: see these [lecture notes](https://verifieddeeplearning.com/nnv_book.pdf).
 - Medium/Hard: Implement [this paper](https://arxiv.org/pdf/1303.2489.pdf) to build an automated verifier that can deal with more complicated data-structures like linked-lists.
+- Medium/Hard: Networks can have side-channels and leak via inter-packet timing. Design a security notion for networks based on differential privacy, see [this paper](https://www.cis.upenn.edu/~sga001/papers/ifs-ccs21.pdf) and [this paper](https://arxiv.org/pdf/1905.02383.pdf). 
 - Hard: Implement a verifier for quantum algorithms, see e.g., [this paper](https://dl.acm.org/doi/10.1145/3582016.3582039).
 - Hard: Use Farkas’ lemma, see [this paper](https://link.springer.com/chapter/10.1007/978-3-540-45069-6_39) to automatically infer invariants for quantum programs.
 
