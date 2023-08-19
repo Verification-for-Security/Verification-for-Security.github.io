@@ -9,9 +9,10 @@ Project Ideas
 - Easy: Extend our verifier with pointers and prove the correctness of a pointer manipulating program (say, a linked-list implementation).
 - Easy: Extend our verifier with Bitvector types. Implement a crypto-algorithm (AES, SHA) and prove its correctness.
 - Easy: Build a larger verified application with our verifier and add a runtime with webassembly (you can use [this](https://www.wasm.builders/gunjan_0307/compiling-javascript-to-wasm-34lk) as a starting point).
-- Easy/Medium: Add Horn clause inference via predicate abstraction to the verifier, as discussed in class.
 - Easy: add automation to our verifier by implementing [this paper](https://users.soe.ucsc.edu/~cormac/papers/fme01.pdf). This is an easier algorithm than the one discussed in class.
 - Easy: Implement IFC type system for nano, and write a secure application. 
+- Easy/Medium: Implement a program synthesis tool. Take a look at [this blog post](https://barghouthi.github.io/2017/04/24/synthesis-primer/) to get you started. Can you think of a class of programs where sythesis is particularly useful?
+- Easy/Medium: Add Horn clause inference via predicate abstraction to the verifier, as discussed in class.
 - Easy/Medium: Implement this [type system](https://people.eecs.berkeley.edu/~necula/Papers/ccured_toplas.pdf) for memory safety.
 - Easy/Medium: Implement a different type system for memory safety: see [this](https://borretti.me/article/type-systems-memory-safety) for inspiration.
 - Easy/Medium: Extend our verifier to make it more usable. Whenever Z3 produces a counterexample use [QuickCheck](https://hackage.haskell.org/package/QuickCheck) to test if the counterexample is reachable. If yes, the program is incorrect. Else, the invariant has to be refined.
