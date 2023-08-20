@@ -17,6 +17,7 @@ Project Ideas
 - Easy/Medium: Implement a different type system for memory safety: see [this](https://borretti.me/article/type-systems-memory-safety) for inspiration.
 - Easy/Medium: Extend our verifier to make it more usable. Whenever Z3 produces a counterexample use [QuickCheck](https://hackage.haskell.org/package/QuickCheck) to test if the counterexample is reachable. If yes, the program is incorrect. Else, the invariant has to be refined.
 - Easy/Medium: Add a “decreases” annotation to the verifier, like in [Dafny](http://dafny.org/latest/DafnyRef/DafnyRef#sec-decreases-clause). This can be used to prove termination. Use can use [this](https://ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Patrick_Gruntz_BA_report.pdf) as starting point.
+- Easy/Medium: Implement this optimized [verification condition generation algorithm](https://users.soe.ucsc.edu/~cormac/papers/popl01.pdf).
 - Easy/Medium: Build a VCGen based verifier for LLVM IR, e.g., using [this library](https://hackage.haskell.org/package/llvm-hs).
 - Easy/Medium: Reimplement [this paper](https://files.sri.inf.ethz.ch/website/papers/sigcomm20-netdice.pdf) for probabilistic network verification.
 - Easy/Medium: Reimplement [this paper](https://www.cs.princeton.edu/~dpw/papers/minesweeper-sigcomm17.pdf) for SMT based network verification.
@@ -36,6 +37,8 @@ Project Ideas
 - Medium: Build a verifier that can prove absence of spectre gadgets.
 - Medium: Build a type-system to protect against a different spectre variant or row-hammer.
 - Medium: Implment the program transformation (for removing side-channels) from [this paper](https://arxiv.org/abs/2104.10749) and add a type system showing its correctness.
+- Medium: Implement this [calculus of depenedency](https://dl.acm.org/doi/pdf/10.1145/292540.292555) which generalizes IFC type checking. Can you use it to write secure programs?
+- Medium: (Re-)Implement this [idea](https://www.cs.jhu.edu/~fabian/courses/CS600.624/proof-carrying-code.pdf)--proof carrying code.
 - Medium/Hard: Implement a verifier based on relational Hoare logic (medium), or probabilistic Hoare logic (hard), see these [lecture notes](https://software.imdea.org/~gbarthe/__introrelver.pdf).
 - Medium/Hard: Implement an alternative approach to Horn clause solving e.g., from [this paper](https://arxiv.org/pdf/1610.06768.pdf) or [this paper](https://link.springer.com/chapter/10.1007/978-3-319-08867-9_55).
 - Medium/Hard: Implement a VCGen-based verifier for P4 networking code.
