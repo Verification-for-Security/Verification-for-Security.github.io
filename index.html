@@ -4,17 +4,16 @@
 About
 ============================================================== 
 
-This course focuses on formal verification with an eye on security. For the
-first part of the course, we will cover the basics of formal verification
-through lectures. We'll start from zero, but move fast. The purpose of this part
-of the course is to give you the necessary background to understand and
-implement program verification tools. In fact, we'll build both an SMT solver
-and a fully functioning program verifier, similar to Amazon's
-[Dafny](http://dafny.org/), from the ground up. In the second part of the
-course, you'll implement an information-flow type system that shows that a piece
-of code doesn't leak its secrets to an attacker. The purpose of the course is to
-give you a deep understanding of program verification and prepare you for
-research and practice in the area.
+This course focuses on formal verification with an eye on security. We will
+cover the basics of formal verification through lectures. We'll start from zero,
+but move fast. The purpose of this part of the course is to give you the
+necessary background to understand and implement program verification tools. In
+fact, we'll build both an SMT solver and a fully functioning program verifier,
+similar to Amazon's [Dafny](http://dafny.org/), from the ground up. You'll then
+implement an information-flow type system that shows that a piece of code
+doesn't leak its secrets to an attacker. The purpose of the course is to give
+you a deep understanding of program verification and prepare you for research
+and practice in the area.
 
 Lectures:
     - Tuesday, 11:00--12:45 in HG-12A33 and Wednesday 15:30--17:15 in HG-12A33. 
@@ -32,9 +31,9 @@ Flipped Classroom
 This class will be using the flipped classroom model. That means, we will make
 videos of the lecture material available online. Please watch the videos before
 the corresponding lecture slot. We will use the actual classroom time for
-questions and discussion. You can find the videos on [Canvas](TBD). We highly
-recommend attending the lecture slots and using them for questions about the
-material. In our experience, students who actively participate do better in
+questions and discussion. You can find the lecture videos on [Canvas](TBD). We
+highly recommend attending the lecture slots and using them for questions about
+the material. In our experience, students who actively participate do better in
 assignments and the exam.
 
 Grading
@@ -45,12 +44,10 @@ The exam must be passed with a grade >= 5.5. Each of the practical assignments
 must be passed with a grade >= 4.0. There will be a resit exam on January 7,
 2025, but there is no resit for the practical assignments.
 
-
 Component                     |  Percentage
 ------------------------------|-------------------
  Assignments  | 50%
  Final Exam   | 50%
-
 
  We offer an optional project for the ambitious. You can skip the last
  assignment, and earn a bonus of up to 3 grade points for the exam. If you're
@@ -69,12 +66,15 @@ Tue Sep 3 2024: Intro & Propositional Logic
     - We'll start with the simplest one: propositional logic.
     - [Slides](slides/lecture1.pdf) 
     - *Reading*:
-    - For this first part of the course, we'll closely follow the following book, which you can access with your VU account.
-    - [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8)
+        - For this first part of the course, we'll closely follow the following book, which you can access with your VU account.
+        - [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8)
+        - This and next lecture will cover chapter 1.
 Wed Sep 4 2024: Normal Forms & DPLL
     - To use propositional logic for reasoning about programs, we need to be able to solve questions about formulas alorithmically.
     - In this lecture, we cover the DPLL algorithm that can check whether a propositional formula is satisfiable.
     - [Slides](slides/lecture2.pdf) 
+    - *Reading*
+        - [Fast Decision Procedures](https://web.eecs.umich.edu/~weimerw/2021-590/reading/dpllt.pdf)
 Sun Sep 8 2024: Deadline: Assignment 0 due (2 pts)
     - Intro to Haskell & Monads due 
     - Take a look at this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) we wrote about monads.
@@ -84,12 +84,17 @@ Tue Sep 10 2024: First-order Logic
     - In fact, we'll see that FOL is *too* expressive! 
     - It's no longer possible to answer questions algorithmically in an efficient way, as most interesting problems are undecidable. 
     - [Slides](slides/lecture3.pdf) 
+    - *Reading*:
+        - Chapter 2 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
 Wed Sep 11 2024: First-order Theories
     - Propositional logic was not expressive enough, FOL was too expressive.
     - In this lecture, we'll talk about the Goldilocks of logics: first-order theories.
     - First-order theories allow us to encode many interesting questions about programs while still maintaining decidability.
     - We'll learn about satisfiability modulo theories (or SMT) which underlies most modern tools for verification, symbolic execution and bug finding.
     - [Slides](slides/lecture4.pdf) 
+    - *Reading*
+        - Chapter 3 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
+        - [Handbook of Satisfiability](https://people.eecs.berkeley.edu/~sseshia/pubdir/SMT-BookChapter.pdf)
 Sun Sep 15 2024: Deadline: Assignment 1a (2 pt)
 Tue Sep 17 2024: Nano & Hoare Logic
     - Now that we've learned about the right logic to reason about programs, we can start to look at actual programs!
@@ -97,7 +102,11 @@ Tue Sep 17 2024: Nano & Hoare Logic
     - As is often the case in PL research, Nano is a minimal, stripped down version of a programming language.
     - This will help us focus on the conceptually important problems.
     - Next, we need to think about when these programs are correct. For this, we'll take a look at Hoare logic.
-    - [Slides](slides/lecture5.pdf) 
+    - [Slides](slides/lecture5.pdf)
+    - *Reading* 
+        - Chapter 2 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
+        - [A Structural Approach to Operational Semantics](papers/SOS.pdf)
+        - [Proof of a program Find](https://web.eecs.umich.edu/~weimerw/2021-590/reading/HoareFind.pdf)
 Wed Sep 18 2024: Hoare Logic & VCGen 
     - Hoare logic is great, as it lets us talk about the correctness of programs.
     - But so far, we have to do proofs manually by constructing a derivation in Hoare logic.
@@ -106,6 +115,8 @@ Wed Sep 18 2024: Hoare Logic & VCGen
     - We can then send these formulas to an SMT solver who will solve them automatically.
     - Now, all we have to do to verify a program is write down its loop invariants, and we can check their correctness automatically. 
     - [Slides](slides/lecture6.pdf)   
+    - *Reading*
+        - Chapter 6 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
 Tue Sep 24 2024: VCs for Functions and Pointer
     - While Nano defines the core of an imperative language, it's still missing some crucial features.
     - In this lecture, we'll add two important missing ones: functions and pointers.
@@ -122,6 +133,9 @@ Tue Oct 1 2024: Solving Horn Clauses
     - But we also need to solve Horn clauses--that is, find the invariants automatically.
     - The method we'll look at will be based on `predicates`-- sets of building blocks that our invariants will be made out of.
     - [Slides](slides/lecture9.pdf) 
+    - *Reading*
+        - [Abstract Interpretation](https://web.eecs.umich.edu/~weimerw/2021-590/reading/AbramskiAI.pdf)
+        - [Horn clauses](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/nbjorner-yurifest.pdf)
 Wed Oct 2 2024: Information Flow Control
     - We'll now shift towards security problems.
     - We'll quickly see how we can use our verification tools to help with security.
@@ -130,6 +144,8 @@ Wed Oct 2 2024: Information Flow Control
     - While in the earlier part of the course, we tried to prove correctness for any program that we might be given, with this approach we're more picky.
     - We'll reject programs that are not obviously correct, and let the programmer come up with a better solution.
     - [Slides](slides/lecture10.pdf) 
+    - *Reading*
+        - This [survey](https://www.cs.cornell.edu/andru/papers/jsac/sm-jsac03.pdf)
 Tue Oct 8 2024: IFC & Side-Channels
     - In the last content lecture of the course, we'll see how to use type-systems to show that programs are free of certain types of side-channels.
     - We'll start with timing and cache, and then move on to more advanced side-channels caused by speculative execution.
