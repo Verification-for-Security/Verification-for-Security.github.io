@@ -16,15 +16,15 @@ you a deep understanding of program verification and prepare you for research
 and practice in the area.
 
 Lectures:
-    - Tuesday, 11:00--12:45 in HG-12A33 and Wednesday 15:30--17:15 in HG-12A33. 
+    - Tuesday, 17:30 -- 19:15 in HG-15A33 and Wednesday 17:30 -- 19:15 in MF-D565. 
     - Check [rooster](https://rooster.vu.nl/schedule) for more detailed scheduling info.
 
 Staff:
     - **Lectures**: Klaus v. Gleissenthall 
-    - **Practicals**: Robin Webbers, Alp Adnan Basar
+    - **Practicals**: Robin Webbers, Matei Tinca, and Zhiyang Wang
 
 Practical Session:
-    - Friday 11:00 - 12:45 in HG-11A33.
+    - Friday 11:00 - 12:45 in NU-3B07.
 
 Flipped Classroom
 ==============================================================    
@@ -32,18 +32,18 @@ This class will be using the flipped classroom model. That means, we will make
 videos of the lecture material available online. Please watch the videos before
 the corresponding lecture slot. We will use the actual classroom time for
 questions and discussion. You can find the lecture videos on
-[Canvas](https://canvas.vu.nl/courses/78421/files/folder/videos). We highly
+[Canvas](https://canvas.vu.nl/courses/85120/files/folder/videos). We highly
 recommend attending the lecture slots and using them for questions about the
 material. In our experience, students who actively participate do better in
-assignments and the exam.
+the assignments and the exam.
 
 Grading
 ==============================================================     
 
 The grade will consist of assignment grades (50%) and final exam grade (50%).
 The exam must be passed with a grade >= 5.5. Each of the practical assignments
-must be passed with a grade >= 4.0. There will be a resit exam on January 7,
-2025, but there is no resit for the practical assignments.
+must be passed with a grade >= 4.0. There will be a resit exam on January 6,
+2026, but there is no resit for the practical assignments.
 
 Component                     |  Percentage
 ------------------------------|-------------------
@@ -52,7 +52,7 @@ Component                     |  Percentage
 
  We offer an optional project for the ambitious. You can skip the last
  assignment, and earn a bonus of up to 3 grade points for the exam. If you're
- interested in doing a project, please let us know at the lecture or practical
+ interested in doing a project, please let us know at the lecture or at a practical
  slot. See [this page](projects.html) for a list of project ideas. Other than a
  programming project, you may also prove a theorem about one of the topics
  discussed in the course.
@@ -60,7 +60,7 @@ Component                     |  Percentage
 Syllabus and Calendar
 ==============================================================
 
-Tue Sep 3 2024: Intro & Propositional Logic
+Tue Sep 2 2025: Intro & Propositional Logic
     - In this lecture we'll go over course admin.
     - We'll also start with the material.
     - To reason about programs, we need to know logic, the language of computation.
@@ -72,7 +72,7 @@ Tue Sep 3 2024: Intro & Propositional Logic
         - For this first part of the course, we'll closely follow the following book, which you can access with your VU account.
         - [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8)
         - This and next lecture will cover chapter 1.
-Wed Sep 4 2024: Normal Forms & DPLL
+Wed Sep 3 2025: Normal Forms & DPLL
     - To use propositional logic for reasoning about programs, we need to be able to solve questions about formulas alorithmically.
     - In this lecture, we cover the DPLL algorithm that can check whether a propositional formula is satisfiable.
     - [Slides](slides/lecture2.pdf) 
@@ -80,10 +80,10 @@ Wed Sep 4 2024: Normal Forms & DPLL
         - 2a-2c
     - *Reading*
         - [Fast Decision Procedures](https://web.eecs.umich.edu/~weimerw/2021-590/reading/dpllt.pdf)
-Sun Sep 8 2024: Deadline: Assignment 0 due (2 pts)
+Sun Sep 7 2025: Deadline: Assignment 1 due (2 pts)
     - Intro to Haskell & Monads due 
     - Take a look at this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) we wrote about monads.
-Tue Sep 10 2024: First-order Logic
+Tue Sep 9 2025: First-order Logic
     - We now know how to solve questions about propositional logic, but the logic is too limited to encode many interesting questions about programs.
     - In this lecture, we'll look at a *way* more expressive logic: first order logic (FOL).
     - In fact, we'll see that FOL is *too* expressive! 
@@ -93,7 +93,7 @@ Tue Sep 10 2024: First-order Logic
         - 3a;3b 
     - *Reading*:
         - Chapter 2 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
-Wed Sep 11 2024: First-order Theories
+Wed Sep 10 2025: First-order Theories
     - Propositional logic was not expressive enough, FOL was too expressive.
     - In this lecture, we'll talk about the Goldilocks of logics: first-order theories.
     - First-order theories allow us to encode many interesting questions about programs while still maintaining decidability.
@@ -104,8 +104,8 @@ Wed Sep 11 2024: First-order Theories
     - *Reading*
         - Chapter 3 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
         - [Handbook of Satisfiability](https://people.eecs.berkeley.edu/~sseshia/pubdir/SMT-BookChapter.pdf)
-Sun Sep 15 2024: Deadline: Assignment 1a (2 pt)
-Tue Sep 17 2024: Nano & Hoare Logic
+Sun Sep 14 2025: Deadline: Assignment 2a (2 pt)
+Tue Sep 16 2025: Nano & Hoare Logic
     - Now that we've learned about the right logic to reason about programs, we can start to look at actual programs!
     - We'll start by defining an imperative language, called Nano, and giving it formal semantics.
     - As is often the case in PL research, Nano is a minimal, stripped down version of a programming language.
@@ -118,7 +118,7 @@ Tue Sep 17 2024: Nano & Hoare Logic
         - Chapter 2 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
         - [A Structural Approach to Operational Semantics](papers/SOS.pdf)
         - [Proof of a program Find](https://web.eecs.umich.edu/~weimerw/2021-590/reading/HoareFind.pdf)
-Wed Sep 18 2024: Hoare Logic & VCGen 
+Wed Sep 17 2025: Hoare Logic & VCGen 
     - Hoare logic is great, as it lets us talk about the correctness of programs.
     - But so far, we have to do proofs manually by constructing a derivation in Hoare logic.
     - Instead, we'll now partially automate proofs by creating a set of verification conditions--SMT formulas whose validity lets us deduce whether the program is correct.
@@ -130,22 +130,22 @@ Wed Sep 18 2024: Hoare Logic & VCGen
         - 6a, 6b 
     - *Reading*
         - Chapter 6 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
-Tue Sep 24 2024: VCs for Functions and Pointer
+Tue Sep 23 2025: VCs for Functions and Pointer
     - While Nano defines the core of an imperative language, it's still missing some crucial features.
     - In this lecture, we'll add two important missing ones: functions and pointers.
     - We'll then show how to extend VCGen to account for them. 
     - [Slides](slides/lecture7.pdf) 
     - *Videos*:
         - 7
-Wed Sep 25 2024: Horn Clauses
+Wed Sep 24 2025: Horn Clauses
     - With VCGen, the only thing a user needs to supply to verify a program are the loop invariants.
     - Now, we want to try to automate this step as well.
     - As a first step, we'll show how to encode the search for loop invariants in logic--as Horn clauses.
     - [Slides](slides/lecture8.pdf) 
     - *Videos*:
         - 8a, 8b
-Friday Sep 27 2024: Deadline: 1b DPLL & SMT (6 pt)
-Tue Oct 1 2024: Solving Horn Clauses
+Fri Sep 26 2025: Deadline: 2b DPLL & SMT (6 pt)
+Tue Sep 30 2025: Solving Horn Clauses
     - Now we know how to encode the search for invariants as Horn clauses.
     - But we also need to solve Horn clauses--that is, find the invariants automatically.
     - The method we'll look at will be based on `predicates`-- sets of building blocks that our invariants will be made out of.
@@ -157,7 +157,7 @@ Tue Oct 1 2024: Solving Horn Clauses
         - [Cousot & Cousot](https://web.eecs.umich.edu/~weimerw/2021-590/reading/CousotCousot.pdf)
         - [Horn clauses](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/nbjorner-yurifest.pdf)
         - [Lazy Abstraction](https://courses.cs.washington.edu/courses/cse501/15sp/papers/henzinger.pdf)
-Wed Oct 2 2024: Information Flow Control
+Wed Oct 1 2025: Information Flow Control
     - We'll now shift towards security problems.
     - We'll quickly see how we can use our verification tools to help with security.
     - Then, we'll look at a completely different approach for ensuring security: type systems.
@@ -169,7 +169,7 @@ Wed Oct 2 2024: Information Flow Control
         - 10
     - *Reading*
         - This [survey](https://www.cs.cornell.edu/andru/papers/jsac/sm-jsac03.pdf)
-Tue Oct 8 2024: IFC & Side-Channels
+Tue Oct 7 2025: IFC & Side-Channels
     - In the last content lecture of the course, we'll see how to use type-systems to show that programs are free of certain types of side-channels.
     - We'll start with timing and cache, and then move on to more advanced side-channels caused by speculative execution.
     - [Slides](slides/lecture11.pdf) 
@@ -181,7 +181,8 @@ Tue Oct 8 2024: IFC & Side-Channels
         - This [paper](https://gleissen.github.io/papers/ccs2023.pdf) on provably bounding leakage of hardware.
         - This [survey](https://cseweb.ucsd.edu/~dstefan/pubs/cauligi:2022:sok.pdf)
         - This [paper](https://www.scs.stanford.edu/~nickolai/papers/zeldovich-histar.pdf) on IFC for an operating system.
-Wed Oct 9 2024:  Liquid Types 
+Wed Oct 8 2025: No class
+Tue Oct 14 2025:  Liquid Types 
     - In this lecture, we'll see how to extend our verification approach for procedures, to a functional language (where functions can themselves be arguments).
     - [Slides](slides/lecture12.pdf) 
     - *Videos*:
@@ -191,12 +192,11 @@ Wed Oct 9 2024:  Liquid Types
         - This [paper](https://gleissen.github.io/papers/refinement-refutations.pdf) on debugging typing failures.
         - You can also start with this [blog post](https://vusecpl.github.io/2024-06-29-type-refutations/).
         - [This tutorial](https://liquid.kosmikus.org/01-intro.html) for liquid Haskell.
-Tue Oct 15 2024: Deadline: Assignment 2: VCGen (10 pt)
-Wed Oct 16 2024: Review and Mock Exam
+Wed Oct 15 2025: Review and Mock Exam
     - We'll use this slot for exam preparation.
-Tue Oct 22 2024: Exam
-Fr Oct 25 2024: Extra Practical IFC Assignment (HG-15A33)
-Sun Oct 31 2024: Deadline: Assignment 3
+Fri Oct 17 2025: Deadline: Assignment 3: VCGen (10 pt)
+Tue Oct 21 2025: Exam
+Sun Oct 31 2025: Deadline: Assignment 4: IFC Types (5 pt)
 
 Assignments
 ==============================================================    
@@ -205,36 +205,36 @@ Assignments
 
 Assignments          |  Points  | Due Date
 ---------------------|----------|-------------------
- 0: Haskell & Monads | 2 pt     | 08 Sep 2024
- 1a: Formal Proofs   | 2 pt     | 15 Sep 2024
- 1b: DPLL & SMT      | 6 pt     | 27 Sep 2024
- 2 : VCGen           | 10 pt    | 15 Oct 2024
- 3 : IFC Types       | 5 pt     | 31 Oct 2024
+ 1: Haskell & Monads | 2 pt     | 07 Sep 2025
+ 2a: Formal Proofs   | 2 pt     | 14 Sep 2025
+ 2b: DPLL & SMT      | 6 pt     | 26 Sep 2025
+ 3 : VCGen           | 10 pt    | 17 Oct 2025
+ 4 : IFC Types       | 5 pt     | 31 Oct 2025
 
- - We highly recommend attending the practicals. In our experience, students who regularly attend the practical sessions do much better in the assignments.
+ - We highly recommend attending the practical sessions. In our experience, students who regularly attend the practical sessions do much better in the assignments.
  - If you have problems, or don't know where to start, please come to the practicals, we're here to help!
- - The assignments will be taken in groups of 2. You can sign up for a group on [Canvas](https://canvas.vu.nl/courses/78421/groups#tab-39784).
+ - Assignments 1 and 2a are individual assignments 
+ - All other assignments will be taken in groups of 2. You can sign up for a group on [Canvas](https://canvas.vu.nl/courses/85120/groups#).
  - All assignments will be written in [Haskell](https://www.haskell.org/). 
  - *You will need a good background in functional programming* for the assignments.
- - We will offer material to catch up, in case you're missing it, but you will have to work extra hard to keep up.
  - If you need a refresher, take a look at this [tutorial](http://learnyouahaskell.com/chapters).
  - Monads have proven to be one of the toughest topics to understand. We wrote this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) to help.
 
  ## Details
 
- - Assignment 0: Haskell and Monads
+ - Assignment 1: Haskell and Monads
     - The purpose of this assignment is to get you up to speed on Haskell.
     - You'll implement a bunch of simple functions in Haskell and get acquainted with the concept of monads.
     - Don't forget to take a look at the [monad tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing).
- - Assignment 1: DPLL and SMT
+ - Assignment 2: DPLL and SMT
     - In this assignment, you'll implement a SAT solver yourself!
     - You'll even turn it into a simple SMT solver for linear arithmetic.
     - Once you're done, please fill out [this anonymous feedback form](https://docs.google.com/forms/d/1IQzEiNOiue__Ca5qLbcAMewfOYfr7DLH5hc0UY0fCVU/edit) to give us feedback on the assignment.
- - Assignment 2: Hoare Logic and VCGen
+ - Assignment 3: Hoare Logic and VCGen
     - In this assignment, you'll implement your own verifier similar to [Dafny](http://dafny.org/), and use it to verify a suite of programs.
- - Assignment 3: IFC Types
+ - Assignment 4: IFC Types
     - In this assignment, you will implement the information flow control type system discussed in lecture.
-Resources
+Other Resources
 ==============================================================
 
 - How to [read a paper](https://our.utah.edu/wp-content/uploads/sites/35/2022/05/HowtoReadPaper.pdf).
