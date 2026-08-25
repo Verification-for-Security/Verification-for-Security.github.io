@@ -16,15 +16,15 @@ you a deep understanding of program verification and prepare you for research
 and practice in the area.
 
 Lectures:
-    - Tuesday, 17:30 -- 19:15 in HG-15A33 and Wednesday 17:30 -- 19:15 in MF-D565. 
+    - Tuesday, 11:00 -- 12:45 in HG-10A20 and Wednesday 17:30 -- 19:15 in HG-10A33. 
     - Check [rooster](https://rooster.vu.nl/schedule) for more detailed scheduling info.
 
 Staff:
-    - **Lectures**: Klaus v. Gleissenthall 
-    - **Practicals**: Robin Webbers, Matei Tinca, and Zhiyang Wang
+    - **Lectures**: Klaus v. Gleissenthall, Robin Webbers
+    - **Practicals**: Robin Webbers, Wind Wong
 
 Practical Session:
-    - Friday 11:00 - 12:45 in NU-3B07.
+    - Friday 13:30 - 15:15 in NU-5A47.
 
 Flipped Classroom
 ==============================================================    
@@ -32,7 +32,7 @@ This class will be using the flipped classroom model. That means, we will make
 videos of the lecture material available online. Please watch the videos before
 the corresponding lecture slot. We will use the actual classroom time for
 questions and discussion. You can find the lecture videos on
-[Canvas](https://canvas.vu.nl/courses/85120/files/folder/videos). We highly
+[Canvas](https://canvas.vu.nl/courses/90625/files/folder/videos). We highly
 recommend attending the lecture slots and using them for questions about the
 material. In our experience, students who actively participate do better in
 the assignments and the exam.
@@ -42,8 +42,16 @@ Grading
 
 The grade will consist of assignment grades (50%) and final exam grade (50%).
 The exam must be passed with a grade >= 5.5. Each of the practical assignments
-must be passed with a grade >= 4.0. There will be a resit exam on January 6,
-2026, but there is no resit for the practical assignments.
+must be passed with a grade >= 4.0. The exam will take place on 20 October 2026, see
+[rooster](https://rooster.vu.nl/schedule) for details. 
+
+*GenAI*: The use of GenAI is limited in this course, see our [policy](index.html#GenAI)
+below. To make sure that assignments were not auto-generate with GenAI, we will
+use automated detection techniques. We will also check for understanding of the
+assignments via dedicated questions in the exam.
+
+There will also be a resit exam on January 5, 2027, but we do not offer a resit
+for the practical assignments.
 
 Component                     |  Percentage
 ------------------------------|-------------------
@@ -60,7 +68,7 @@ Component                     |  Percentage
 Syllabus and Calendar
 ==============================================================
 
-Tue Sep 2 2025: Intro & Propositional Logic
+Tue Sep 1 2026: Intro & Propositional Logic
     - In this lecture we'll go over course admin.
     - We'll also start with the material.
     - To reason about programs, we need to know logic, the language of computation.
@@ -72,7 +80,7 @@ Tue Sep 2 2025: Intro & Propositional Logic
         - For this first part of the course, we'll closely follow the following book, which you can access with your VU account.
         - [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8)
         - This and next lecture will cover chapter 1.
-Wed Sep 3 2025: Normal Forms & DPLL
+Wed Sep 2 2026: Normal Forms & DPLL
     - To use propositional logic for reasoning about programs, we need to be able to solve questions about formulas alorithmically.
     - In this lecture, we cover the DPLL algorithm that can check whether a propositional formula is satisfiable.
     - [Slides](slides/lecture2.pdf) 
@@ -80,10 +88,10 @@ Wed Sep 3 2025: Normal Forms & DPLL
         - 2a-2c
     - *Reading*
         - [Fast Decision Procedures](https://web.eecs.umich.edu/~weimerw/2021-590/reading/dpllt.pdf)
-Sun Sep 7 2025: Deadline: Assignment 1 due (2 pts)
+Sun Sep 6 2026: Deadline: Assignment 1 due (2 pts)
     - Intro to Haskell & Monads due 
     - Take a look at this [tutorial](https://docs.google.com/document/d/1On06ZVBocHEOzlIQFq1MrQzwOjeKE-MyDE7eNPkyiDo/edit?usp=sharing) we wrote about monads.
-Tue Sep 9 2025: First-order Logic
+Tue Sep 8 2026: First-order Logic
     - We now know how to solve questions about propositional logic, but the logic is too limited to encode many interesting questions about programs.
     - In this lecture, we'll look at a *way* more expressive logic: first order logic (FOL).
     - In fact, we'll see that FOL is *too* expressive! 
@@ -93,7 +101,7 @@ Tue Sep 9 2025: First-order Logic
         - 3a;3b 
     - *Reading*:
         - Chapter 2 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
-Wed Sep 10 2025: First-order Theories
+Wed Sep 9 2026: First-order Theories
     - Propositional logic was not expressive enough, FOL was too expressive.
     - In this lecture, we'll talk about the Goldilocks of logics: first-order theories.
     - First-order theories allow us to encode many interesting questions about programs while still maintaining decidability.
@@ -104,8 +112,8 @@ Wed Sep 10 2025: First-order Theories
     - *Reading*
         - Chapter 3 of [The Calculus of Computation](https://link.springer.com/book/10.1007/978-3-540-74113-8).
         - [Handbook of Satisfiability](https://people.eecs.berkeley.edu/~sseshia/pubdir/SMT-BookChapter.pdf)
-Sun Sep 14 2025: Deadline: Assignment 2a (2 pt)
-Tue Sep 16 2025: Nano & Hoare Logic
+Sun Sep 13 2026: Deadline: Assignment 2a (2 pt)
+Tue Sep 15 2026: Nano & Hoare Logic
     - Now that we've learned about the right logic to reason about programs, we can start to look at actual programs!
     - We'll start by defining an imperative language, called Nano, and giving it formal semantics.
     - As is often the case in PL research, Nano is a minimal, stripped down version of a programming language.
@@ -118,7 +126,7 @@ Tue Sep 16 2025: Nano & Hoare Logic
         - Chapter 2 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
         - [A Structural Approach to Operational Semantics](papers/SOS.pdf)
         - [Proof of a program Find](https://web.eecs.umich.edu/~weimerw/2021-590/reading/HoareFind.pdf)
-Wed Sep 17 2025: Hoare Logic & VCGen 
+Wed Sep 16 2026: Hoare Logic & VCGen 
     - Hoare logic is great, as it lets us talk about the correctness of programs.
     - But so far, we have to do proofs manually by constructing a derivation in Hoare logic.
     - Instead, we'll now partially automate proofs by creating a set of verification conditions--SMT formulas whose validity lets us deduce whether the program is correct.
@@ -130,22 +138,26 @@ Wed Sep 17 2025: Hoare Logic & VCGen
         - 6a, 6b 
     - *Reading*
         - Chapter 6 of [The formal semantics of programming languages : an introduction](https://vu.on.worldcat.org/oclc/26764522)
-Tue Sep 23 2025: VCs for Functions and Pointer
+Tue Sep 22 2026: VCs for Functions and Pointer
     - While Nano defines the core of an imperative language, it's still missing some crucial features.
     - In this lecture, we'll add two important missing ones: functions and pointers.
     - We'll then show how to extend VCGen to account for them. 
     - [Slides](slides/lecture7.pdf) 
     - *Videos*:
         - 7
-Wed Sep 24 2025: Horn Clauses
+Wed Sep 23 2026: Horn Clauses
     - With VCGen, the only thing a user needs to supply to verify a program are the loop invariants.
     - Now, we want to try to automate this step as well.
     - As a first step, we'll show how to encode the search for loop invariants in logic--as Horn clauses.
     - [Slides](slides/lecture8.pdf) 
     - *Videos*:
         - 8a, 8b
-Fri Sep 26 2025: Deadline: 2b DPLL & SMT (6 pt)
-Tue Sep 30 2025: Solving Horn Clauses
+Fri Sep 25 2026: Deadline: 2b DPLL & SMT (6 pt)
+Tue Sep 29 2026: Guest Lecture: Timing Side Channels in Hardware (Robin)
+    - Robin will talk about timing side-channels in hardware, and how to prove that a hardware design satisfies a leakage description.
+    - *Reading*
+        - https://gleissen.github.io/papers/pantomime.pdf 
+Wed Sep 30 2026: Solving Horn Clauses
     - Now we know how to encode the search for invariants as Horn clauses.
     - But we also need to solve Horn clauses--that is, find the invariants automatically.
     - The method we'll look at will be based on `predicates`-- sets of building blocks that our invariants will be made out of.
@@ -157,7 +169,7 @@ Tue Sep 30 2025: Solving Horn Clauses
         - [Cousot & Cousot](https://web.eecs.umich.edu/~weimerw/2021-590/reading/CousotCousot.pdf)
         - [Horn clauses](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/nbjorner-yurifest.pdf)
         - [Lazy Abstraction](https://courses.cs.washington.edu/courses/cse501/15sp/papers/henzinger.pdf)
-Wed Oct 1 2025: Information Flow Control
+Tue Oct 6 2026: Information Flow Control
     - We'll now shift towards security problems.
     - We'll quickly see how we can use our verification tools to help with security.
     - Then, we'll look at a completely different approach for ensuring security: type systems.
@@ -169,7 +181,7 @@ Wed Oct 1 2025: Information Flow Control
         - 10
     - *Reading*
         - This [survey](https://www.cs.cornell.edu/andru/papers/jsac/sm-jsac03.pdf)
-Tue Oct 7 2025: IFC & Side-Channels
+Wed Oct 7 2026: IFC & Side-Channels
     - In the last content lecture of the course, we'll see how to use type-systems to show that programs are free of certain types of side-channels.
     - We'll start with timing and cache, and then move on to more advanced side-channels caused by speculative execution.
     - [Slides](slides/lecture11.pdf) 
@@ -181,8 +193,7 @@ Tue Oct 7 2025: IFC & Side-Channels
         - This [paper](https://gleissen.github.io/papers/ccs2023.pdf) on provably bounding leakage of hardware.
         - This [survey](https://cseweb.ucsd.edu/~dstefan/pubs/cauligi:2022:sok.pdf)
         - This [paper](https://www.scs.stanford.edu/~nickolai/papers/zeldovich-histar.pdf) on IFC for an operating system.
-Wed Oct 8 2025: No class
-Tue Oct 14 2025:  Liquid Types 
+Tue Oct 13 2026: Liquid Types 
     - In this lecture, we'll see how to extend our verification approach for procedures, to a functional language (where functions can themselves be arguments).
     - [Slides](slides/lecture12.pdf) 
     - *Videos*:
@@ -192,11 +203,11 @@ Tue Oct 14 2025:  Liquid Types
         - This [paper](https://gleissen.github.io/papers/refinement-refutations.pdf) on debugging typing failures.
         - You can also start with this [blog post](https://vusecpl.github.io/2024-06-29-type-refutations/).
         - [This tutorial](https://liquid.kosmikus.org/01-intro.html) for liquid Haskell.
-Wed Oct 15 2025: Review and Mock Exam
+Wed Oct 14 2026: Review and Mock Exam
     - We'll use this slot for exam preparation.
-Fri Oct 17 2025: Deadline: Assignment 3: VCGen (10 pt)
-Tue Oct 21 2025: Exam
-Sun Oct 31 2025: Deadline: Assignment 4: IFC Types (5 pt)
+Fri Oct 16 2026: Deadline: Assignment 3: VCGen (10 pt)
+Tue Oct 20 2026: Exam
+Sat Oct 31 2026: Deadline: Assignment 4: IFC Types (5 pt)
 
 Assignments
 ==============================================================    
@@ -234,7 +245,8 @@ Assignments          |  Points  | Due Date
     - In this assignment, you'll implement your own verifier similar to [Dafny](http://dafny.org/), and use it to verify a suite of programs.
  - Assignment 4: IFC Types
     - In this assignment, you will implement the information flow control type system discussed in lecture.
-Other Resources
+
+Resources
 ==============================================================
 
 - How to [read a paper](https://our.utah.edu/wp-content/uploads/sites/35/2022/05/HowtoReadPaper.pdf).
@@ -244,5 +256,17 @@ Other Resources
 - IFC type systems [survey](https://www.cs.cornell.edu/andru/papers/jsac/sm-jsac03.pdf).
 - See [this page](projects.html) for a list of project ideas.
 - How to <a href="https://jelv.is/blog/Debugging-Haskell-Type-Errors/">debug</a> Haskell type errors.
+
+GenAI
+============================================================== 
+Use of generative AI is only permitted for orientation and brainstorming. In this
+course, generative AI (GenAI), such as ChatGPT or similar tools, may only be
+used for orientation and brainstorming, for example to explore ideas or to
+clarify questions. GenAI may not be used to generate content that becomes part
+of the final submission, except when this is explicitly allowed in the assignment description. 
+The final product must be based entirely on the student's own understanding, analysis, and
+wording. Incorrect use of GenAI is considered fraud. If established, the
+submitted work or assessment result will be declared invalid, and the
+Examination Board may impose further measures.
 
 <!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
